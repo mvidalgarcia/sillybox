@@ -1,5 +1,7 @@
 # sillybox
 
+Very simple implementation of a cloud drive such as Dropbox using Google App Engine.
+
 ## Demo
 https://mysillybox.appspot.com/
 
