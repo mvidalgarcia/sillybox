@@ -16,7 +16,7 @@
 #
 import webapp2
 from app.controllers.main import MainHandler
-from app.controllers.upload import UploadFormHandler, UploadHandler, ViewHandler
+from app.controllers.upload import UploadHandler, ViewHandler
 
 # class MainHandler(webapp2.RequestHandler):
 #     def get(self):
@@ -24,7 +24,6 @@ from app.controllers.upload import UploadFormHandler, UploadHandler, ViewHandler
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/upload_form', UploadFormHandler),
     ('/upload_file', UploadHandler),
     ('/view_file/([^/]+)?', ViewHandler),
 ], debug=True)

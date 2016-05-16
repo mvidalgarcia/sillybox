@@ -1,0 +1,59 @@
+body {
+    background: aliceblue;
+    color: steelblue;
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'Arial Black', sans-serif;
+}
+
+header h1 {
+    font: bold 3em/1 'Helvetica Neue', Helvetica, Arial, 'Arial Black', sans-serif;
+    margin: 0;
+    padding: 20px 140px;
+}
+
+header {
+    color: aliceblue;
+    background: steelblue;
+}
+
+.wrapper {
+    padding: 20px 140px;
+}
+
+label.filename {
+    color: #444;
+    font-weight: 600;
+}
+
+.file .fa-download {
+    color: #3AC7B4;
+}
+
+.file .fa-download:hover {
+    color: #11EACD;
+}
+
+.format {
+    color: dimgrey;
+    display: block;
+    font-size: 10pt;
+}
+
+.date {
+    color: cornflowerblue;
+    font-size: 11pt;
+}
+
+.upload-button {
+    background-color: #46B4A5;
+    border: none;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.upload-button:hover {
+    background: #3AC7B4;
+    cursor: pointer;
+}

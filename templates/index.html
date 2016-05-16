@@ -2,14 +2,32 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>SillyBox</title>
+        <link rel="stylesheet" type="text/css" href="static/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
     <body>
-    <h1>Files</h1>
-    {% for file in files %}
-        <p>{{ file.name }}</p>
-        <p>{{ file.format }}</p>
-        <p>{{ file.date }}</p>
-    {% endfor %}
+        <header>
+            <h1>Sillybox</h1>
+        </header>
+        <div class="wrapper">
+            <h2>Files</h2>
+            <ul>
+                {% for file in files %}
+                    <p>
+                        <div class="file">
+                          <label class="filename">{{ file.name }}</label>&nbsp;<a href="view_file/{{ file.blob_key }}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                        </div>
+                        <span class="format">{{ file.format }}</span>
+                        <span class="date">{{ file.date }}</span>
+                    </p>
+                {% endfor %}
+            </ul>
+            <form action="{{ upload_url }}" method="POST" enctype="multipart/form-data">
+              <input type="file" name="file" id="file" class="inputfile"><br>
+              <input class="upload-button" type="submit" name="submit" value="Upload!">
+            </form>
+        </div>
     </body>
 </html>
